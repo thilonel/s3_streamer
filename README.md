@@ -14,15 +14,4 @@ Using, default chunk size, S3 as source
 Add to Gemfile or install with `gem install s3-streamer`
 
 ## Usage example
-```
-require 'aws-sdk'
-
-client = Aws::S3::Client.new(access_key_id: 'ACCESS_KEY_ID',
-                             secret_access_key: 'SECRET_ACCESS_KEY',
-                             region: 'REGION')
-
-streamer = S3Streamer.new(client)
-
-streamer.stream(URI('http://example.com/big_file1.csv'), 'BUCKET_NAME', 'destination_big_file1.csv')
-streamer.stream(URI('http://example.com/big_file2.csv'), 'BUCKET_NAME', 'destination_big_file2.csv')
-```
+See the spec.
