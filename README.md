@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/thilonel/s3_streamer.svg?branch=master)](https://travis-ci.org/thilonel/s3_streamer)
+
 # S3 Streamer
 
 Stream a file from a remote url using the Ruby AWS SDK to an Amazon S3 bucket.
