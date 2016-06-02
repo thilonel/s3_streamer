@@ -6,9 +6,9 @@ This tool uses the Multipart Upload API, that only makes sense for large files, 
 ## Benchmarks
 Using, default chunk size, S3 as source
 
-* 85.7 MB with a 10/1.25 MBps connection
-  Uploaded in 3 parts in 91.079307 seconds (0.93 MBps)
-  Using less than 200MB RAM
+* 98 MB file with a 10/1.25 MBps connection
+  Finished in 1 minute 35.84 seconds (1.02 MBps)
+  226MB Peak memory usage
 
 ## Install
 Add to Gemfile or install with `gem install s3-streamer`
