@@ -5,6 +5,8 @@ require 's3_streamer/client/upstream'
 
 module S3Streamer
   class Client
+    attr_reader :client
+
     def initialize(options)
       @client = Aws::S3::Client.new(options)
     end
