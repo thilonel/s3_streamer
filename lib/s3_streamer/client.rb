@@ -1,7 +1,7 @@
 require 'aws-sdk'
 
-require 's3_streamer/client/downstream'
-require 's3_streamer/client/upstream'
+require 's3_streamer/downstream'
+require 's3_streamer/upstream'
 
 module S3Streamer
   class Client
