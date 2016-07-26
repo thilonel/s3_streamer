@@ -1,7 +1,7 @@
 require 'aws-sdk'
 
-require 's3_streamer/client/downstream'
-require 's3_streamer/client/upstream'
+require 's3_streamer/downstream'
+require 's3_streamer/upstream'
 
 module S3Streamer
   class Client
@@ -11,10 +11,10 @@ module S3Streamer
       @client = Aws::S3::Client.new(options)
     end
 
-    def stream(source_uri, bucket, destination_file)
-      upstream = Upstream.new @client, bucket, destination_file
+    def stream(source_uri, bucket, destination_file, options={})
+      upstream = Upstream.new client, bucket, destination_file
 
-      Downstream.new(URI(source_uri)).each do |chunk|
+      Downstream.new(URI(source_uri), options).each do |chunk|
         upstream.upload chunk
       end
 
